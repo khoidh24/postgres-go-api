@@ -1,6 +1,6 @@
 # Postgres Go API 🌿
 
-This is a basic CRUD API for managing notes using Go Fiber and Supabase Postgres.
+This is a basic CRUD API for managing notes using **[Go Fiber](https://gofiber.io/)** and **[Supabase Postgres](https://supabase.com/)**.
 
 ## Features ✨
 
@@ -25,7 +25,12 @@ This is a basic CRUD API for managing notes using Go Fiber and Supabase Postgres
 
 - Supabase Auth
 
-### How to setup 🧩
+## Required
+
+- [Go v1.22.4 or above](https://golang.org/dl/)
+- [Supabase](https://supabase.com/)
+
+## How to setup 🧩
 
 1. Copy the example.env file to .env
 2. Fill in the values for the environment variables
