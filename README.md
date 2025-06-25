@@ -14,12 +14,12 @@ This is a basic CRUD API for managing notes using Go Fiber and Supabase Postgres
 
 ## API Endpoints 🔗
 
-- POST /api/v1/notes
-- GET /api/v1/notes
-- GET /api/v1/notes/:id
-- PUT /api/v1/notes/:id
-- DELETE /api/v1/notes/:id
-- DELETE /api/v1/notes
+- POST `**_/api/v1/notes_**`
+- GET `**_/api/v1/notes_**`
+- GET `**_/api/v1/notes/:id_**`
+- PUT `**_/api/v1/notes/:id_**`
+- DELETE `**_/api/v1/notes/:id_**`
+- DELETE `**_/api/v1/notes_**`
 
 ## Authentication 🔑
 
