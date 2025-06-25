@@ -1,0 +1,55 @@
+# Binaries for programs and plugins
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+
+# Output of `go build`
+/bin/
+/build/
+/dist/
+
+# Build artifacts
+*.out
+
+# Go workspace file
+go.work
+go.work.sum
+
+# Go module cache
+/pkg/mod/
+/pkg/sumdb/
+
+# Dependency directories
+vendor/
+
+# IDE and Editor settings
+.vscode/
+.idea/
+*.swp
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Env / Config
+.env
+.env.local
+.env.*.local
+.envrc
+
+# Fiber-specific (optional)
+fiber.log
+
+# Coverage reports
+coverage.out
+*.coverprofile
+
+# Temporary files
+*.tmp
+*.bak
