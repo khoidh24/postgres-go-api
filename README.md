@@ -25,7 +25,7 @@ This is a basic CRUD API for managing notes using **[Go Fiber](https://gofiber.i
 
 - Supabase Auth
 
-## Required
+## Requirements 📋
 
 - [Go v1.22.4 or above](https://golang.org/dl/)
 - [Supabase](https://supabase.com/)
