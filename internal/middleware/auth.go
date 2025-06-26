@@ -45,5 +45,16 @@ func CheckAuth(c *fiber.Ctx) error {
 		})
 	}
 
+	// Extract user_id from claims
+	claims, ok := token.Claims.(jwt.MapClaims)
+	if !ok || claims["sub"] == nil {
+		return c.Status(fiber.StatusUnauthorized).JSON(fiber.Map{
+			"message": "Unauthorized",
+		})
+	}
+
+	userID := claims["sub"].(string)
+	c.Locals("userID", userID)
+
 	return c.Next()
 }
