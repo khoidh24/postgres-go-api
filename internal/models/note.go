@@ -4,6 +4,7 @@ import "time"
 
 type Note struct {
 	ID         string    `gorm:"type:uuid;default:gen_random_uuid();primaryKey" json:"id"`
+	UserID     string    `gorm:"not null" json:"user_id"`
 	Title      string    `json:"title"`
 	Content    string    `json:"content"`
 	CoverImage string    `json:"cover_image"`
