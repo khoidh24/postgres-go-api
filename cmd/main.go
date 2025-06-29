@@ -18,7 +18,7 @@ func main() {
 	db := database.ConnectDB()
 	db.AutoMigrate(&models.Note{})
 
-	routes.NoteRoutes(app)
+	routes.RegisterV1Routes(app)
 
 	port := os.Getenv("PORT")
 	if port == "" {

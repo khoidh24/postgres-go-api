@@ -7,12 +7,13 @@ import (
 	"github.com/gofiber/fiber/v2"
 )
 
-func NoteRoutes(app *fiber.App) {
-	note := app.Group("/api/v1/notes", middleware.CheckAuth)
-	note.Post("/", Note.CreateNote)
-	note.Get("/", Note.GetAllNote)
-	note.Get("/:id", Note.GetNoteById)
-	note.Put("/:id", Note.UpdateNote)
-	note.Patch("/:id", Note.ToggleActiveStatus)
-	note.Delete("/", Note.DeleteNotes)
+func NoteRoutes(r fiber.Router) {
+	noteRoutes := r.Group("/notes", middleware.CheckAuth)
+
+	noteRoutes.Post("/", Note.CreateNote)
+	noteRoutes.Get("/", Note.GetAllNote)
+	noteRoutes.Get("/:id", Note.GetNoteById)
+	noteRoutes.Put("/:id", Note.UpdateNote)
+	noteRoutes.Patch("/:id", Note.ToggleActiveStatus)
+	noteRoutes.Delete("/", Note.DeleteNotes)
 }

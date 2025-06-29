@@ -7,9 +7,9 @@ import (
 	"github.com/gofiber/fiber/v2"
 )
 
-func ProfileRoutes(app *fiber.App) {
-	r := app.Group("api/v1/profile", middleware.CheckAuth)
+func ProfileRoutes(r fiber.Router) {
+	profileRoutes := r.Group("/profile", middleware.CheckAuth)
 
-	r.Get("/profile", profile.GetProfile)
-	r.Put("/profile", profile.EditProfile)
+	profileRoutes.Get("/", profile.GetProfile)
+	profileRoutes.Put("/", profile.EditProfile)
 }
